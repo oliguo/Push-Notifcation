@@ -1,0 +1,9 @@
+openssl pkcs12 -clcerts -nokeys -out Cert.pem -in Cer.p12
+
+openssl pkcs12 -nocerts -out Key.pem -in Key.p12
+
+cat Cert.pem Key.pem > CK.pem
+
+reference:
+iOS Tutorial - Push Notifications (APNs)
+https://www.youtube.com/watch?v=_3YlqWWnI6s
