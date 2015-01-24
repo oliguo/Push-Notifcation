@@ -1,11 +1,17 @@
 <?php
 
-// API access key from Google API's Console
-//define( 'API_ACCESS_KEY', 'YOUR-API-ACCESS-KEY-GOES-HERE' );
+define( 'API_ACCESS_KEY', 'xxxxxxxxxxxxx' );
+require 'mysql.php';
 
-//$registrationIds = array( $_GET['id'] );
+$select='';
 
-$registrationIds = ["your android registerID"];//json format
+          $select="select * from push where push_device='Android'";
+  $registrationIds=[];  
+    $result=mysql_query($select);
+    while($row=mysql_fetch_assoc($result)){
+    array_push($registrationIds, $row['push_idGoogle']);
+    }
+    
 
 // prep the bundle
 $msg = array
