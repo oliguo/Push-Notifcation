@@ -1,25 +1,24 @@
 <?php
 
-define( 'API_ACCESS_KEY', 'xxxxxxxxxxxxx' );
-require 'mysql.php';
+// API access key from Google API's Console
+//define( 'API_ACCESS_KEY', 'YOUR-API-ACCESS-KEY-GOES-HERE' );
+define( 'API_ACCESS_KEY', 'xxxxxxx' );
 
-$select='';
-
-          $select="select * from push where push_device='Android'";
+function androidPush($content){
+          $select="select * from push where push_device='Android' and push_allow='on'";
   $registrationIds=[];  
     $result=mysql_query($select);
     while($row=mysql_fetch_assoc($result)){
     array_push($registrationIds, $row['push_idGoogle']);
     }
-    
-
+   
 // prep the bundle
 $msg = array
 (
-	'message' 	=> 'here is a message. message',
-	'title'		=> 'This is a title. title',
-	'subtitle'	=> 'This is a subtitle. subtitle',
-	'tickerText'	=> 'Ticker text here...Ticker text here...Ticker text here',
+	'message' 	=> $content,
+	'title'		=> 'PiggyRebates',
+	'subtitle'	=> ' ',
+	'tickerText'	=> ' ',
 	'vibrate'	=> 1,
 	'sound'		=> 1,
 	'largeIcon'	=> 'large_icon',
@@ -48,4 +47,6 @@ curl_setopt( $ch,CURLOPT_POSTFIELDS, json_encode( $fields ) );
 $result = curl_exec($ch );
 curl_close( $ch );
 
-echo $result;
+$jsonResult=json_decode($result, true);
+echo $jsonResult['success'];
+}

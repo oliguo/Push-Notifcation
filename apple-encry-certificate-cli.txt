@@ -1,4 +1,4 @@
-openssl pkcs12 -clcerts -nokeys -out Cert.pem -in Cer.p12
+openssl pkcs12 -clcerts -nokeys -out Cert.pem -in Cert.p12
 
 openssl pkcs12 -nocerts -out Key.pem -in Key.p12
 
