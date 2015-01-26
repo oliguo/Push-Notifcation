@@ -16,7 +16,7 @@ function androidPush($content){
 $msg = array
 (
 	'message' 	=> $content,
-	'title'		=> 'PiggyRebates',
+	'title'		=> 'your app title or other',
 	'subtitle'	=> ' ',
 	'tickerText'	=> ' ',
 	'vibrate'	=> 1,
