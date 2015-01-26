@@ -22,3 +22,7 @@ browser show successful message
 reference:(search apple/android push php)
 https://gist.github.com/prime31/5675017
 https://gist.github.com/search?l=php&q=apple+push+notification+php
+
+//applePush.php
+http://stackoverflow.com/questions/5630500/how-to-send-push-notification-to-multiple-devices
+

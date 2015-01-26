@@ -1,5 +1,5 @@
 <?php
-
+//reference:http://stackoverflow.com/questions/5630500/how-to-send-push-notification-to-multiple-devices
 // Put your device token here (without spaces):
 $deviceToken = 'your apple device token';
 
