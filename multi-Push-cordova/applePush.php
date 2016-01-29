@@ -36,7 +36,7 @@ if (!$fp)
 // Create the payload body
 $body['aps'] = array(
 	'alert' => $content,
-        'badge'=>'1',
+        'badge'=>1,
 	'sound' => 'default'
 	);
 
