@@ -70,10 +70,10 @@ function onNotification(e) {
             } else {
                 if (e.coldstart) {
                     $("#app-status-ul").append("<li>--COLDSTART NOTIFICATION--" + ",</li>");
-                    navigator.notification.confirm('有最新消息', pushGoMessage, 'Piggyrebates', ["瀏覽", "取消"]);
+                    navigator.notification.confirm('有最新消息', pushGoMessage, 'AppTitle', ["瀏覽", "取消"]);
                 } else {
                     $("#app-status-ul").append("<li>--BACKGROUND NOTIFICATION--" + ",</li>");
-                    navigator.notification.confirm('有最新消息', pushGoMessage, 'Piggyrebates', ["瀏覽", "取消"]);
+                    navigator.notification.confirm('有最新消息', pushGoMessage, 'AppTitle', ["瀏覽", "取消"]);
                 }
             }
             $("#app-status-ul").append("<li>MESSAGE -> MSG: " + e.payload.message + ",</li>");
