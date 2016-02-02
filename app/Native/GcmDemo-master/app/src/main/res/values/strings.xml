@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GcmDemo</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="gcm_defaultSenderId">1097142800256</string>
+    <string name="title_activity_reciver">reciverActivity</string>
+</resources>
